@@ -29,7 +29,7 @@ export default {
   methods: {
     async signUp() {
       // Handle sign-up logic here
-      console.warn("Sign Up clicked", this.name, this.email, this.password);
+      //console.warn("Sign Up clicked", this.name, this.email, this.password);
       // You can use this data to send a request to your backend API for registration
       let result = await axios.post("http://localhost:3000/users", {
         name: this.name,
@@ -46,6 +46,15 @@ export default {
         // this.$router.push("/");
       }
     },
+  },
+  mounted() {
+    // Check if user is already logged in
+    let userInfo = localStorage.getItem("user-info");
+    if (userInfo) {
+      this.$router.push({
+        name: "Home",
+      });
+    }
   },
 };
 </script>
