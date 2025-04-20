@@ -38,9 +38,13 @@ export default {
       });
       console.warn(result);
       if (result.status == 201) {
-        alert("sign Up Done");
+        localStorage.setItem("user-info", JSON.stringify(result.data));
+        this.$router.push({
+          name: "Home",
+        });
+
+        // this.$router.push("/");
       }
-      localStorage.setItem("user-info", JSON.stringify(result.data));
     },
   },
 };
