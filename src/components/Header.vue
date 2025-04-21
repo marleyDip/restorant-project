@@ -1,15 +1,23 @@
 <template>
   <div class="nav">
-    <a href="">Home</a>
-    <a href="">Add Restaurant</a>
-    <a href="">Update Restaurant</a>
-    <a href="">Logout</a>
+    <router-link to="/">Home</router-link>
+    <router-link to="add">Add Restaurant</router-link>
+    <router-link to="update">Update Restaurant</router-link>
+    <a @click="logout" href="#">Logout</a>
   </div>
 </template>
 
 <script>
 export default {
   name: "HeaderView",
+  methods: {
+    logout() {
+      // Implement logout logic here
+      //console.log("User logged out");
+      localStorage.clear();
+      this.$router.push("/login");
+    },
+  },
 };
 </script>
 

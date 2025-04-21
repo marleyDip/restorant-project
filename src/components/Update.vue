@@ -1,26 +1,20 @@
 <template>
   <Header />
-  <h1>Hello {{ name }}, Welcome on Home Page</h1>
+  <h1>Hello User, Welcome on Update Restaurant Page</h1>
 </template>
 
 <script>
 import Header from "./Header.vue";
 
 export default {
-  name: "HomeView",
+  name: "UpdateView",
   components: {
     Header,
-  },
-  data() {
-    return {
-      name: "",
-    };
   },
   mounted() {
     //console.warn("HomeView mounted");
     // Check if user is logged in
     let userInfo = localStorage.getItem("user-info");
-    this.name = JSON.parse(userInfo).name;
     if (!userInfo) {
       // Redirect to login page if not logged in
       this.$router.push({ name: "SignUp" });
