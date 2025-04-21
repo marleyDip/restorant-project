@@ -15,18 +15,25 @@
   ],
   "restaurants": [
     {
-      "id": "1",
-      "name": "Restaurant A",
-      "location": "Location A",
-      "cuisine": "Cuisine A",
-      "rating": 4.5
+      "name": "Mama kitchin",
+      "location": "Sirajganj",
+      "cuisine": "heavy Taste",
+      "rating": 4.5,
+      "id": "1"
     },
     {
-      "id": "2",
-      "name": "Restaurant B",
-      "location": "Location B",
-      "cuisine": "Cuisine B",
-      "rating": 4.0
+      "name": "Restaurant c",
+      "location": "Dhaka, Bangladesh",
+      "cuisine": "Cuisine c",
+      "rating": 5,
+      "id": "5fc2"
+    },
+    {
+      "id": "907b",
+      "name": "Somespur kitchen ",
+      "location": "somrspur bazar, belkuchi",
+      "cuisine": "tasty",
+      "rating": 5
     }
   ]
 }
