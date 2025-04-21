@@ -1,10 +1,16 @@
 <template>
+  <Header />
   <h1>Hello User, Welcome on Home Page</h1>
 </template>
 
 <script>
+import Header from "./Header.vue";
+
 export default {
   name: "HomeView",
+  components: {
+    Header,
+  },
   mounted() {
     //console.warn("HomeView mounted");
     // Check if user is logged in
